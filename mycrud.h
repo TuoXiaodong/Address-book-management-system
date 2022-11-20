@@ -1,10 +1,10 @@
 //
-// Created by Tuoxd on 2022/11/20.
+// Created by Tuo Xiaodong on 2022/11/20.
 //
 
 #ifndef ADDRESS_BOOK_MANAGEMENT_SYSTEM_MYCRUD_H
 #define ADDRESS_BOOK_MANAGEMENT_SYSTEM_MYCRUD_H
-#define MAX_SIZE 1000
+#define MAX_SIZE 1000 //设置最大人数
 
 #include<iostream>
 
@@ -20,7 +20,7 @@ struct people {
     //年龄
     int age;
     //联系电话
-    string teleNumber;
+    string telephoneNumber;
     //家庭住宅
     string address;
 };
@@ -35,12 +35,33 @@ struct addressBook {
 
 //声明所需函数
 
+//显示界面函数
+void showMenu();
+
 // 增加函数
-void addNumber(addressBook *p);
+void addPerson(addressBook *p);
 
 // 显示函数
 // 只读不写 加const防止误操作
-void showAll(const addressBook *p);
+void showPerson(const addressBook *p);
+
+// 查找函数
+int ifExit(addressBook *p,string name);
+
+// 删除函数
+void deletePerson(addressBook *p);
+
+// 查找函数
+void findPerson(addressBook *p);
+
+// 修改联系人
+void modifyPerson(addressBook *p);
+
+// 修改的界面显示函数
+void showSmallMenu();
+
+// 清空通讯录
+void cleanAll(addressBook *p);
 
 
 #endif //ADDRESS_BOOK_MANAGEMENT_SYSTEM_MYCRUD_H
