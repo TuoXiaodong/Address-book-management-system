@@ -3,5 +3,4 @@ project(Address_book_management_system)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Address_book_management_system
-        main.cpp)
+add_executable(Address_book_management_system mycrud.h mycrud.cpp main.cpp)
