@@ -111,10 +111,11 @@ void deletePerson(addressBook *p){
         cout<<"查无此人"<<endl;
     }else{
         //遍历覆盖
-        for(int i = result;i<p->id;i++){
+        int temp = p->id;
+        for(int i = result;i<temp;i++){
             p->peopleArray[i]=p->peopleArray[i+1];
-            (p->id)--;
         }
+        (p->id)--;
         cout<<"删除完成"<<endl;
     }
     system("pause"); //暂停指令
@@ -141,7 +142,7 @@ void findPerson(addressBook *p){
         cout<<"\t联系电话：";
         cout<<p->peopleArray[result].telephoneNumber;
         cout<<"\t家庭地址：";
-        cout<<p->peopleArray[result].address;
+        cout<<p->peopleArray[result].address<<endl;
     }
     system("pause"); //暂停指令
     system("cls"); //清屏指令
@@ -155,6 +156,7 @@ void showSmallMenu(){
     cout<<"******3.修改年龄********"<<endl;
     cout<<"******4.修改电话********"<<endl;
     cout<<"******5.修改住址********"<<endl;
+    cout<<"******0.退出修改********"<<endl;
 
 }
 void modifyPerson(addressBook *p){
@@ -176,27 +178,26 @@ void modifyPerson(addressBook *p){
                 case 1:
                     cout << "请输入新的姓名：";
                     cin >> p->peopleArray[result].name;
-                    num--;
                     break;
                 case 2:
                     cout << "请输入新的性别：";
                     cin >> p->peopleArray[result].sex;
-                    num--;
                     break;
                 case 3:
                     cout << "请输入新的年龄：";
                     cin >> p->peopleArray[result].age;
-                    num--;
                     break;
                 case 4:
                     cout << "请输入新的电话：";
                     cin >> p->peopleArray[result].telephoneNumber;
-                    num--;
                     break;
                 case 5:
                     cout << "请输入新的住址：";
                     cin >> p->peopleArray[result].address;
+                    break;
+                case 0:
                     num--;
+                    cout<<"退出成功"<<endl;
                     break;
                 default:
                     cout<<"输入有误！请重新输入：";
