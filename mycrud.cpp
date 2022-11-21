@@ -33,7 +33,7 @@ void addPerson(addressBook *p) {
     // 判断用户输入是否大于总容量 1000
     if (num > 1000 || num + (p->id) > 1000) {
         cout << "你的添加量已经超出容量，请检查容量后再输入" << endl;
-    } else {
+    } else if(num<=1000 && num>0  && num+(p->id)<=1000){
         for (int i = 0; i < num; i++) {
             // 指针赋值操作
             cout<<"\n姓名：";
@@ -57,6 +57,8 @@ void addPerson(addressBook *p) {
             (p->id) += 1; // 每加一个人 就记录当前通讯录的人数
         }
         cout << "添加成功！"<<endl;
+    }else{
+        cout<<"你的输入有误，请检查后重新输入"<<endl;
     }
     system("pause"); //暂停指令
     system("cls"); //清屏指令
@@ -216,12 +218,11 @@ void cleanAll(addressBook *p){
     char select_clean;
     cin >> select_clean;
     while(true) {
-
-        if (select_clean != 'y' || select_clean != 'Y') {
+        if (select_clean == 'y' || select_clean == 'Y') {
             p->id = 0;
             cout<<"清空成功"<<endl;
             break;
-        } else if (select_clean != 'n' || select_clean != 'N') {
+        } else if (select_clean == 'n' || select_clean == 'N') {
             break;
         } else{
             cin>>select_clean;
