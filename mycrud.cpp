@@ -225,6 +225,7 @@ void cleanAll(addressBook *p){
         } else if (select_clean == 'n' || select_clean == 'N') {
             break;
         } else{
+            cout<<"输入有误，请重新输入"<<endl;
             cin>>select_clean;
         }
     }

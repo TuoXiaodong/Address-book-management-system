@@ -11,6 +11,7 @@
 
 using namespace std;
 
+// 声明结构体
 // 定义联系人结构体
 struct people {
     //姓名

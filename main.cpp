@@ -2,7 +2,7 @@
 // Created by Tuo Xiaodong on 2022/11/19.
 //
 #include<iostream>
-#include"mycrud.h" //自定义头文件 添加所有函数部分 和 结构体部分
+#include"mycrud.h" //自定义头文件 声明有函数部分 和 结构体部分
 
 using namespace std;
 
@@ -13,7 +13,7 @@ int main() {
 
     //用户的选择
     int select = 0;
-    //标记
+    //标记 判断何时退出循环
     bool flag = true;
     while (flag) {
         //界面显示
