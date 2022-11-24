@@ -12,4 +12,19 @@
 + 清空联系人：清空通讯录中所有信息
 + 退出通讯录：退出当前通讯录
 ***
-文件编码：GBK
+文件编码：**GBK**
+
+Address book management system
+===
+***
+Project requirements:
+---
++ Add contacts: add new people to the address book, the information includes (name, gender, age, contact number, home address) and record up to 1000 people
++ Display contacts: display information of all displayed contacts in the address book
++ Delete contact: delete the specified contact by name
++ Find contacts: view the specified contact information by name
++ Modify contact: re-edit the specified contact by name
++ Clear contacts: Clear all information in the address book
++ Exit address book: exit the current address book
+***
+File encoding: **GBK**
